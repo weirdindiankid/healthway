@@ -2,8 +2,12 @@ import time
 from selenium import webdriver
 from cookies import *
 import secrets
+from selenium.webdriver.chrome.options import Options
 
-driver = webdriver.Chrome()
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+
+driver = webdriver.Chrome(options=chrome_options)
 driver.get('https://webchartnow.com/bostonuniv/webchart.cgi')
 user = driver.find_element_by_id('j_username')
 password = driver.find_element_by_id('j_password')
