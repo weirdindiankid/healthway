@@ -1,6 +1,5 @@
 import time
 from selenium import webdriver
-from cookies import *
 import secrets
 from selenium.webdriver.chrome.options import Options
 
